@@ -8,7 +8,7 @@ Detectar **falhas e anomalias** nas execuções de jobs do Rundeck e publicar um
 flowchart LR
   %% ---- Coleta ----
   subgraph A["Coleta & Ingestão"]
-    N8N[n8n (Cron + HTTP Request)] --> RD[(Rundeck API)]
+    N8N["n8n" (Cron + HTTP Request)] --> RD[(Rundeck API)]
     N8N -->|append CSV| GH[GitHub Repo<br/>data/dados_rundeck.csv]
   end
 
