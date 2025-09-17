@@ -15,7 +15,7 @@ flowchart LR
   %% ---- CI/CD e Inferência ----
   subgraph B["CI/CD, Treino & Detecção"]
     GH -->|push| GHA["GitHub Actions"]
-    GHA --> PIPE[pipeline.py<br/>ETL + Features + Anomalias<br/>(IsolationForest/Z-score)]
+    GHA --> PIPE["pipeline.py<br/>ETL + Features + Anomalias<br/>(IsolationForest/Z-score)"]
     PIPE --> OUT1[("data/anomalies.json")]
     PIPE --> OUT2[("app/anomalies.json")]
     GHA -->|commit artifacts| GH
